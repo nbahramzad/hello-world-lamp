@@ -1,0 +1,12 @@
+web:
+  build: .
+  ports:
+  - "5000:80"
+  volumes:
+  - .:/app
+  links:
+  - mysql
+mysql:
+  image: mysql
+  environment:
+   MYSQL_ROOT_PASSWORD: abc123
